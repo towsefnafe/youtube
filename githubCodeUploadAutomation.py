@@ -20,11 +20,11 @@ fileName = input()
 
 try:
     title = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[3]/div/div/form[2]/div[1]/span/input')
-        title.send_keys(fileName)
-            code = open(fileName, 'r')
-                codeInput = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[3]/div/div/form[2]/div[5]/div[2]/div/div[5]/div[1]/div/div/div/div[5]/div/pre')
-                    codeInput.send_keys(code.read())
-                        submitBtn = browser.find_element_by_xpath('//*[@id="submit-file"]')
-                            submitBtn.click()
-                            except:
-                                print("Something wrong")
+    title.send_keys(fileName)
+    code = open(fileName, 'r')
+    codeInput = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[3]/div/div/form[2]/div[5]/div[2]/div/div[5]/div[1]/div/div/div/div[5]/div/pre')
+    codeInput.send_keys(code.read())
+    submitBtn = browser.find_element_by_xpath('//*[@id="submit-file"]')
+    submitBtn.click()
+except:
+    print("Something wrong")
